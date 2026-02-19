@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 300px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background: #f4f7f6; }
+    h2 { color: #2c3e50; font-size: 1.2em; margin-top: 0; }
+    label { font-size: 0.85em; color: #7f8c8d; }
+    input { width: 100%; margin: 8px 0 15px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; cursor: pointer; background: #27ae60; color: white; border: none; border-radius: 5px; font-weight: bold; transition: background 0.3s; }
+    button:hover { background: #219150; }
+    button:disabled { background: #bdc3c7; cursor: not-allowed; }
+    #timerDisplay { font-size: 1.5em; font-weight: bold; text-align: center; color: #e74c3c; margin: 10px 0; display: none; }
+    .footer { font-size: 0.75em; text-align: center; color: #95a5a6; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>ZenBlock Pro 🧘</h2>
+  <div id="setup">
+    <label>Sites à bloquer (séparés par virgule)</label>
+    <input type="text" id="sites" placeholder="facebook.com, twitter.com">
+    <label>Durée du focus (minutes)</label>
+    <input type="number" id="duration" value="25" min="1">
+    <button id="startBtn">Démarrer la session</button>
+  </div>
+  <div id="activeMode">
+    <div id="timerDisplay">00:00</div>
+    <p style="text-align:center; font-size:0.9em;">Restez concentré !</p>
+  </div>
+  <div class="footer">Fini la procrastination.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
